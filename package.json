@@ -1,7 +1,7 @@
 {
   "name": "localstorage-polyfill",
   "version": "0.9.0",
-  "description": "in memory localStorage polyfill for node.js utilizing proxies",
+  "description": "in memory localStorage polyfill for node.js utilizing ES6 proxies",
   "main": "localStorage.js",
   "scripts": {
     "test": "ava"
