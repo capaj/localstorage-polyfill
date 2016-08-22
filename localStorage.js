@@ -46,7 +46,6 @@ global.localStorage = new Proxy(instance, {
     if (LocalStorage.prototype.hasOwnProperty(name)) {
       return instance[name]
     }
-    const stringKey = String(name)
     if (valuesMap.has(name)) {
       return instance.getItem(name)
     }

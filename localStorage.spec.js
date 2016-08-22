@@ -35,11 +35,14 @@ test('proxy should work', (t) => {
   localStorage.a = {}
   t.is(localStorage.a, '[object Object]')
   localStorage.c = 1
+  const obj = {}
+  localStorage[obj] = 'key gets stringified'
+  t.is(localStorage['[object Object]'], 'key gets stringified')
   t.is(localStorage.c, '1')
-  t.is(localStorage.length, 2)
+  t.is(localStorage.length, 3)
   localStorage.length = 0
-  t.is(localStorage.length, 2)
+  t.is(localStorage.length, 3)
   localStorage.key = 'only an ass**** would do this'
-  t.is(localStorage.length, 2)
+  t.is(localStorage.length, 3)
   t.is(localStorage.key, 'only an ass**** would do this')
 })
