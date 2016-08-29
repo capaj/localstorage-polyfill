@@ -29,6 +29,12 @@ test('methods should work', (t) => {
   t.is(localStorage.length, 0)
 })
 
+test('error throwing', (t) => {
+  t.throws(() => {
+    localStorage.key()
+  }, /Failed to execute 'key' on 'Storage': 1 argument required, but only 0 present\./)
+})
+
 test('proxy should work', (t) => {
   t.is(localStorage.length, 0)
 

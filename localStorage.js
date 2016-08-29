@@ -22,7 +22,9 @@ class LocalStorage {
   }
 
   key (i) {
-    i = i || 0
+    if (arguments.length === 0) {
+      throw new TypeError("Failed to execute 'key' on 'Storage': 1 argument required, but only 0 present.") // this is a TypeError implemented on Chrome, Firefox throws Not enough arguments to Storage.key.
+    }
     var arr = Array.from(valuesMap.keys())
     return arr[i]
   }
