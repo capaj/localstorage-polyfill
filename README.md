@@ -5,8 +5,9 @@ in memory localStorage polyfill for node.js utilizing ES6 proxies
 ## Installation
 
 ```
-npm i localstorage-polyfill
+npm i localstorage-polyfill -D
 ```
+Saving for development, because primarily this package is meant for unit testing browser in node.js.
 
 ## Usage
 
