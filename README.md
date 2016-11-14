@@ -1,6 +1,6 @@
 # localstorage-polyfill
 
-in memory localStorage polyfill for node.js utilizing ES6 proxies
+in memory localStorage polyfill for node.js utilizing ES6 proxies(requires node.js 6 at least)
 
 ## Installation
 
